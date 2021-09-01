@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { PostserviceService } from './postservice.service';
 
 @Component({
   selector: 'my-app',
