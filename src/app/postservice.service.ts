@@ -12,5 +12,13 @@ export class PostserviceService {
     return fetch(this.URLbase + "/new", {method: "POST"})
     .then(response => response.json(), error => alert(error));
   }
+  getData = (key: string, callback: any) => {
+    return fetch(this.URLbase + "/get?key=" + key)
+    .then(response => response.json(), error => alert(error))
+    .then(data => callback(data));}
+  sendData = (key: string, msg: {}) => {
+    return fetch(this.URLbase + "/post?key=" + key + "&msg=" + JSON.stringify(msg), {method: "POST"})
+    .then(response => response.json(), error => alert(error));
+     }
 
 }

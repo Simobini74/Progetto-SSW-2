@@ -24,8 +24,14 @@ export class AppComponent  {
   constructor(private postservice: PostserviceService) {
     this.postit = new Array<Post>();
   }
-RichiediChiave =async (key:string)=>{
+RichiediChiave =async (key:string=null)=>{
+  if (key===null){
   const k =await this.postservice.requestKey();
-  this.RichiediChiave(k);
+  this.RichiediChiave(k); } 
+  else{
+    const datas = await this.postservice.getData(key, data => JSON.parse(data));
+
+  }
  }
+ 
 }
