@@ -21,5 +21,11 @@ export class AppComponent  {
   title = 'Applicazione per Postit';
   key : string;
   postit: Array<Post>;
- 
+  constructor(private postservice: PostserviceService) {
+    this.postit = new Array<Post>();
+  }
+RichiediChiave =async (key:string)=>{
+  const k =await this.postservice.requestKey();
+  this.RichiediChiave(k);
+ }
 }
