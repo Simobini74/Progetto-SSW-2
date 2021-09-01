@@ -1,0 +1,15 @@
+<div class="post-op">
+<ul>
+  <li id="check" (click)="creaPost(titolo.textContent, contenuto.textContent, importante.value)">&#10003;</li>
+  <li id="times" (click)="creazione_post = false;">&times;</li>
+  <li>
+    <div class="post-radio">
+      importante?
+      <select #importante>
+   <option value="1" selected>Sì</option>
+   <option value="0">No</option>
+ </select>
+    </div>
+  </li>
+</ul>
+</div> <!-- fine post-op -->
