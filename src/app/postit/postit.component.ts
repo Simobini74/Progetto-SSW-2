@@ -20,7 +20,7 @@ export class PostitComponent implements OnInit {
    }
   creaPost = async (titolo: string, contenuto: string, importante: string) =>{
     if(titolo.trim().length !== 0 && contenuto.trim().length !== 0) {          
-      var post = new Post();
+      var post =new Post('pippo','pluto');
       post.importante = Number(importante);
       post.titolo = titolo;
       post.contenuto = contenuto;
@@ -31,9 +31,9 @@ export class PostitComponent implements OnInit {
       alert("Non puoi creare un post vuoto");
     }
 
-  }}
+  }
+}
 
  
   
 
-}
