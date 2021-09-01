@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { PostserviceService } from '../postservice.service';
+import { Post } from '../app.component';
 
 
 @Component({
@@ -7,9 +8,11 @@ import { PostserviceService } from '../postservice.service';
   templateUrl: './postit.component.html',
   styleUrls: ['./postit.component.css']
 })
+
+
 export class PostitComponent implements OnInit {
   @Input() key: string;  
-  @Input() postit: Array<Post>;
+  @Input() postit: Array<Post>
   creazione_post: boolean;
   post_visualizzato: number;
   ngOnInit(): void { }
