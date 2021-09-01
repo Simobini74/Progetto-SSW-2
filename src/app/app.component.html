@@ -2,8 +2,8 @@
 <h2>{{title}}</h2> 
 <h3>INIZIA:</h3>
 <input #key type="text" value="" placeholder="Inserisci la chiave">
-<button type="button">Invia chiave</button>
+<button type="button" (click)="RichiediChiave(key.value)">Invia chiave</button>
 <h3>NON POSSIEDI UNA CHIAVE:</h3>
-<button type="button" (click)="RichiediChiave">Richiedi chiave</button>
+<button type="button" (click)="RichiediChiave(null)">Richiedi chiave</button>
 <p>{{key}}</p>
 

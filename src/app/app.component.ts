@@ -4,9 +4,11 @@ import { PostserviceService } from './postservice.service';
 class Post {
   titolo : string;
   contenuto: string;
+  importante: number;
   constructor(titolo: string, contenuto: string) {
     this.titolo=titolo;
     this.contenuto=contenuto;
+  
   }
 }
 
@@ -31,7 +33,11 @@ RichiediChiave =async (key:string=null)=>{
   else{
     const datas = await this.postservice.getData(key, data => JSON.parse(data));
 
-  }
+    
+    }
+
+
+  
  }
  
 }
