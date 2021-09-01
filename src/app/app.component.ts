@@ -8,5 +8,6 @@ import { PostserviceService } from './postservice.service';
 })
 export class AppComponent  {
   name = 'Progetto SSW';
-  title = 'Applicazione per Postit'
+  title = 'Applicazione per Postit';
+  key : string;
 }
