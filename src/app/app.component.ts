@@ -4,16 +4,11 @@ import { PostserviceService } from './postservice.service';
 export class Post {
   titolo : string;
   contenuto: string;
-  importante: number;
-  constructor(titolo: string, contenuto: string) {
-    this.titolo=titolo;
-    this.contenuto=contenuto;
-  
-  }
+  importante: boolean;
 }
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
